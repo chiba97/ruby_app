@@ -1,8 +1,8 @@
 require_relative 'player'
 require_relative 'enemy'
 
-player   = Player.new(name: "天使", hp: 500, offense: 150, defense: 100)
-enemy    = Enemy.new(name: "悪魔", hp: 250, offense: 200, defense: 100)
+player = Player.new(name: "天使", hp: 500, offense: 150, defense: 100)
+enemy  = Enemy.new(name: "悪魔", hp: 250, offense: 200, defense: 100)
 
 loop do
   player.attack(enemy)
@@ -11,7 +11,7 @@ loop do
     puts "世界は光を取り戻した"
     break
   end
-
+  
   enemy.attack(player)
   if player.hp <= 0
     puts "#{player.name}はたたかいに負けてしまった"
